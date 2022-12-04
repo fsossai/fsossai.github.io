@@ -1,6 +1,9 @@
 title: Federico Sossai
 logo: /assets/img/profilepic.jpg
-description: Minimal is a theme for GitHub Pages.
+description: 
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+site.show_downloads: false
+site.github.is_project_page: false
+
