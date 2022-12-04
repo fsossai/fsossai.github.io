@@ -2,44 +2,30 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Hello, my name is Federico Sossai, I am a PhD student at Northwestern University.
 
-[Link to another page](./another-page.html).
+<!-- [Link to another page](./another-page.html) -->
 
-There should be whitespace between paragraphs.
+# Research
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+At the moment I'm working on optimizing and parallelizing compilers advised by 
+Simone Campanoni. 
 
-# Header 1
+## My Story
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+My passion for computers began early in my life: in middle school my strong aptitude for
+programming started emerging, eventually guiding me towards university, where I found out how
+much I love to study computer science, think of new ideas and tackle challenging problems.
+At the University of Padova, Italy, I earned a solid mathematical background (calculus, linear
+algebra, discrete math, probability theory with applications) and I bolstered my skills in the analysis
+of divide-and-conquer algorithms, greedy and dynamic programming approaches. During my Master’s
+years I really enjoyed reasoning about approximation and randomization techniques applied to NP-
+Hard problems together with designing effective heuristics. Now I feel confident with C++, C,
+Python, Linux scripting and I am familiar with Fortran, C# and Java. I'm planning on learning Rust
+in the near future.
 
-## Header 2
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 
