@@ -3,6 +3,7 @@ layout: default
 ---
 
 Hello,
+
 my name is Federico Sossai, I am a PhD student at Northwestern University.
 
 <!-- [Link to another page](./another-page.html) -->
@@ -44,8 +45,11 @@ in the near future.
 # Contacts
 
 Mudd Hall, Room 3304
+
 2233 Tech Drive,
+
 Evanston, IL 60208
+
 
 federicosossai2029 [at] u [dot] northwestern [dot] edu
 
