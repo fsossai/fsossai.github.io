@@ -29,7 +29,7 @@ developers to write complicated or non-maintainable code?
 4. Is it possible to take away the burden of explicit parallel directives by means of higher level
 abstractions?
 
-# My Story
+# About Me
 
 My passion for computers began early in my life: in middle school my strong aptitude for
 programming started emerging, eventually guiding me towards university, where I found out how
