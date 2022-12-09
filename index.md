@@ -2,16 +2,14 @@
 layout: default
 ---
 
-Hello,
-
-my name is Federico Sossai, I am a PhD student at Northwestern University.
+**Hello!** My name is Federico Sossai, I am a PhD student at Northwestern University.
 
 <!-- [Link to another page](./another-page.html) -->
 
 # Research
 
 At the moment I'm working on optimizing and **parallelizing compilers** advised by 
-[Simone Campanoni](https://users.cs.northwestern.edu/~simonec) 
+[Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
 
 Complexity of modern computer systems has grown significantly in the last decade.
 The combination of CPUs, GPUs and various accelerators raises the level of skills necessary to
@@ -20,7 +18,8 @@ implementation of core algorithms often takes advantage of the underlying physic
 through the use of vendor-specific tools, resulting in a lack of cross-architecture portability.
 Moreover, architecture-aware implementations can distract programmers from the gist of their
 algorithms and can harm both maintainability and **performance portability**. 
-I believe that compilers play a fundamental role in bridging the gap between the
+I believe that compilers play a fundamental role in bridging the gap between programmers'
+**intentions** and tedious implementation details.
 In my research path I would like to investigate the following questions:
 1. How can compilers generate efficient code for parallel systems without requiring
 developers to write complicated or non-maintainable code?
