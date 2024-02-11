@@ -51,12 +51,16 @@ a small {
   display:block;
 }
 
+a img {
+  vertical-align: middle;
+}
+
 a:hover small {
   color:#777;
 }
 
 .wrapper {
-  width:860px;
+  width:950px;
   margin:0 auto;
 }
 
@@ -68,7 +72,7 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  font-family: Consolas, monospace;
   color:#333;
 }
 
@@ -119,11 +123,35 @@ kbd {
 }
 
 header {
-  width:270px;
+  width:320px;
   float:left;
   position:fixed;
+  text-align: right;
   -webkit-font-smoothing:subpixel-antialiased;
 }
+
+.title {
+  /* line-height:1.1; */
+  color: black;
+  font-size:48px;
+}
+
+.fancy {
+  font-family: "Kingthings Spikeless";
+  font-size:52px;
+}
+
+.link {
+  align-items: center;
+  text-align: right;
+}
+
+.link img {
+  align: right;
+  width: 48px;
+  height: 48px;
+}
+
 
 ul.downloads {
   list-style:none;
@@ -186,9 +214,10 @@ strong {
 }
 
 section {
-  width:500px;
+  width:550px;
   float:right;
   padding-bottom:50px;
+  text-align: justify;
 }
 
 small {
@@ -270,6 +299,10 @@ footer {
 
   .downloads {
     width:99%;
+  }
+
+  .downloads li, .downloads li + li {
+    width:49%;
   }
 
   .downloads li, .downloads li + li + li {
