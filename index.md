@@ -54,7 +54,7 @@ techniques applied to NP-Hard problems together with designing effective heurist
 {
   "firstname": "Federico",
   "lastname": "Sossai",
-  "email": "{firstname}.{lastname}@gmail.com",
+  "email": "${firstname}.${lastname}@gmail.com",
   "citizenships": ["Italy"],
   "address": {
     "building": "Mudd Library",
