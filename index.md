@@ -29,7 +29,7 @@ questions:
 I believe that in the advent of an even more heterogeneous future, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
 
-# &#x1F4DC; Pubblications
+# &#x1F4DC; Publications
 
 2023 **CGO**<br>
 &emsp; &#x21B3; T McMichen, N Greiner, P Zhong, **F Sossai**, A Patel, S Campanoni<br>
