@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**Ciao!** My name is Federico Sossai and I don't snack during talks &#x1F609;.
+**Ciao!** My name is Federico Sossai and I don't snack during talks :)
 
 [Among other things](./others), I'm a third-year PhD student at
 [Northwestern University](https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html)
@@ -11,43 +11,43 @@ and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 
 # &#x1F526; Research
 At the moment I'm working on **parallelizing compilers**.
-Parallelism in scientific codes has been studied for decades with remarkable results.
-The time has come for "less-scientific" codes to get de-sequentialized.
 
-In my vision, a *powerful langugage* allows users to express high-level concepts
-and properties of their algorithms, while a *powerful compiler* should exploit them
+In my vision, a powerful langugage allows users to express high-level **properties**
+of their algorithms, while a powerful compiler should exploit them
 and minimize the performance cost of the abstractions that permit such expressiveness.
 
 Nobody focusing on an algorithm enojys being distracted by a code that quickly gets
 unreadable and inflexible because of tedious implementation details.
 
-When single-core performance is not enough, the problem is exacerbated by
-parallelelization techniques that requires restructuring of data collections.
-This is why I'm investigating the following questions:
-1. What is hindering compilers from **extracting parallelism** from sequential programs?
-2. How can high-level **data collections** boost (semi-)automatic parallelelization?
+When single-core performance is not enough, the problem is exacerbated by manual
+parallelelization techniques that, for example, require data structures to be reshaped
+or even worse, redesigned.
 
+This is why I'm investigating the following questions:
+0. What is hindering compilers from **extracting parallelism** in sequential programs?
+0. How to bring **data collections** into the compiler to unlock more parallelizing transformations?
+
+Parallelism in scientific codes has been studied for decades with remarkable results.
+However, when programs are not dominated by well-structured array computation
+we are in dim candlelight.
 I believe that in the advent of an even more heterogeneous future, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
 
 # &#x1F4DC; Publications
 
-2023 **CGO**<br>
-&emsp; &#x21B3; T McMichen, N Greiner, P Zhong, **F Sossai**, A Patel, S Campanoni<br>
-&emsp; &#x21B3; [Representing Data Collections in an SSA Form](https://mcmichen.cc/files/MEMOIR_CGO_2024.pdf)
+{% include publications.html %}
 
 # &#x1FAB6; About Me
 
-My passion for computers began early in my life: in middle school my strong aptitude for
-programming started emerging, eventually guiding me towards university, where I found out
-how much I love to study computer science, think of new ideas and tackle challenging problems.
-At the [University of Padova](https://www.dei.unipd.it/en/), Italy, I earned a solid
-mathematical background (calculus, linear algebra, discrete math, probability theory with
-applications) and I bolstered my skills in the analysis of divide-and-conquer algorithms,
-greedy and dynamic programming approaches.
-
-During my Master’s years I really enjoyed reasoning about approximation and randomization
-techniques applied to NP-Hard problems together with designing effective heuristics. 
+I've always had a strong passion for programming, since middle school.
+I'm fascinated by how much structure can emerge when enough thought is
+put into passing ideas through the sieve of algorithmic precision,
+and how these structures come back again and again.
+At the [University of Padova](https://www.dei.unipd.it/en/), I realized how
+the love for learning did not only belong to computer science but extended to
+all the disciplines ruled by the rigor of math.
+For better or worse, calculus, electromagnetism, probability theory, and NP-completeness
+forever changed how I look at the world, and there's no way back.
 
 # `$ cat contacts.json`
 
@@ -70,3 +70,4 @@ techniques applied to NP-Hard problems together with designing effective heurist
 ```
 
 [You can find me here](https://maps.app.goo.gl/yXqyoCz8yGVzU9AL8)
+

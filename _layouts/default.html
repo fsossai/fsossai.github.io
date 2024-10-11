@@ -5,115 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F342</text></svg>">
-    <!-- <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png"> -->
 
-    {% include head-custom.html %}
+    <title>{{ site.title }}</title>
 
-    <style>
-      .tilting:hover {
-        animation: rotate 0.5s linear 1;
-      }
-      .top-banner{
-        position: fixed;
-        width: 1000px; 
-        margin: 0 auto;
-        left: 50%;
-        transform: translate(-50%, -10%);
-        top: 0;
-      }
-      .faded-image {
-        display: block;
-        width: 100%; /* Ensure the image takes the full width of its container */
-      }
-      .top-banner::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(to right,
-            rgba(255, 255, 255, 1),
-            rgba(255, 255, 255, 0) 10%,
-            rgba(255, 255, 255, 0) 90%,
-            rgba(255, 255, 255, 1));
-        pointer-events: none;
-      }
-      .fixed-image {
-        position: fixed; 
-        left: 50%;
-        top: 0;
-      }
-      .link-img {
-        filter: grayscale(100%);
-      }
-      @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        33% { transform: rotate(-15deg); }
-        66% { transform: rotate(15deg); }
-        100% { transform: rotate(0deg); }
-      }
-      a {
-        font-weight: normal;
-        text-decoration: none; 
-        color: orange;
-        transition: color 0.5s ease;
-      }
-      a:hover {
-        font-weight: normal;
-        text-decoration: none;
-        color: maroon;
-      }
-    </style>
   </head>
 
   <body>
+
     <div class="top-banner">
       <img src="/assets/img/autumn.jpg" class="faded-image"/>
     </div>
 
     <div class="wrapper" style="padding-top: 200px;">
-      <header>
-        <!-- <img src="/assets/img/autumn.jpg" class="fixed-image"/> -->
-        <div class="title"><b>Federico Sossai</b></div>
-        <p>3<sup>rd</sup> year PhD student @
-          <a href="https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html">
-            NU
-          </a>
-        </p>
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-        <p class="link">
-          <a href="http://github.com/fsossai">
-            GitHub
-            <img src="/assets/img/github.png" class="link-img tilting"/>
-          </a>
-        </p>
-        <p class="link">
-          <a href="https://scholar.google.com/citations?user=ZYN-FTUAAAAJ">
-            Google Scholar
-            <img src="/assets/img/scholar.png" class="link-img tilting"/>
-          </a>
-        </p>
-        <p class="link">
-          <a href="http://linkedin.com/in/federico-sossai">
-            LinkedIn
-            <img src="/assets/img/linkedin.png" class="link-img tilting"/>
-          </a>
-        </p>
-      </header>
-      <section>
-
-      {{ content }}
-
-      </section>
+      {% include header.html %}
+      <section> {{ content }} </section>
       <footer>
-        <!-- <p><small>Footer</small></p> -->
+        <p><small>Last update: October 2024</small></p>
       </footer>
     </div>
+
+
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
   </body>
 </html>

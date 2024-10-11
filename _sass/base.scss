@@ -35,13 +35,15 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#267CB9;
-  text-decoration:none;
+  font-weight: normal;
+  text-decoration: none; 
+  transition: color 0.5s ease;
 }
 
 a:hover, a:focus {
-  color:#069;
-  font-weight: bold;
+  font-weight: normal;
+  text-decoration: none;
+  color: maroon;
 }
 
 a small {
@@ -131,13 +133,12 @@ header {
 }
 
 .title {
-  /* line-height:1.1; */
   color: black;
   font-size:48px;
+  /* font-family: "Kingthings Spikeless"; */
 }
 
 .fancy {
-  /* font-family: "Kingthings Spikeless"; */
   font-size:50px;
 }
 
@@ -237,6 +238,70 @@ footer {
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+.papers {
+  text-align: left;
+}
+
+.papers table {
+  border-collapse: collapse;
+  width: 100%;  
+}
+
+.papers td {
+  padding-left: 30px; 
+  margin: 0;         
+  text-indent: 0;     
+}
+
+.tilting:hover {
+  animation: rotate 0.5s linear 1;
+}
+
+.top-banner {
+  position: fixed;
+  width: 1000px; 
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  top: 0;
+}
+
+.faded-image {
+  display: block;
+  width: 100%; 
+}
+
+.top-banner::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(255, 255, 255, 1));
+  pointer-events: none;
+}
+
+.fixed-image {
+  position: fixed; 
+  left: 50%;
+  top: 0;
+}
+
+.link-img {
+  filter: grayscale(100%);
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(-15deg); }
+  66% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
 }
 
 @media print, screen and (max-width: 960px) {
