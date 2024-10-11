@@ -4,27 +4,29 @@ layout: default
 
 **Ciao!** My name is Federico Sossai and I don't snack during talks &#x1F609;.
 
-Among other things, I'm a PhD student at
+[Among other things](./others), I'm a third-year PhD student at
 [Northwestern University](https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html)
 and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 [Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
 
-<!-- [Link to another page](./another-page.html) -->
-
-
 # &#x1F526; Research
 
 At the moment I'm working on **parallelizing compilers**.
+Parallelism in scientific codes has been studied for decades with remarkable results.
+The time has come for "less-scientific" codes to get de-sequentialized.
 
-In my vision, a good compiler plays a fundamental role in bridging the gap
-between programmer **intentions** and tedious implementation details.
+In my vision, a *powerful langugage* allows users to express high-level concepts
+and properties of their algorithms, while a *powerful compiler* should exploit them
+and minimize the performance cost of the abstractions that permit such expressiveness.
 
-Nobody wants to deal with unreadable, unmaintainable and unportable parallel
-code but the world where performance or memory consumption really matter 
-seems to leave us with no other choice. This is why I'm investigating the following
-questions:
+Nobody focusing on an algorithm enojys being distracted by a code that quickly gets
+unreadable and inflexible because of tedious implementation details.
+
+When single-core performance is not enough, the problem is exacerbated by
+parallelelization techniques that requires restructuring of data collections.
+This is why I'm investigating the following questions:
 1. What is hindering compilers from **extracting parallelism** from sequential programs?
-2. Could high-level **data collections** be a game-changer for automatic parallelelization?
+2. How can high-level **data collections** boost (semi-)automatic parallelelization?
 
 I believe that in the advent of an even more heterogeneous future, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
