@@ -11,7 +11,11 @@
     <!-- <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png"> -->
 
     {% include head-custom.html %}
+
     <style>
+      .tilting:hover {
+        animation: rotate 0.5s linear 1;
+      }
       .top-banner{
         position: fixed;
         width: 1000px; 
@@ -44,11 +48,6 @@
       }
       .link-img {
         filter: grayscale(100%);
-        transition: filter 0.5s ease;
-      }
-      .link-img:hover {
-        filter: grayscale(100%);
-         animation: rotate 0.5s linear 1; /* Rotate continuously */
       }
       @keyframes rotate {
         0% { transform: rotate(0deg); }
@@ -90,19 +89,19 @@
         <p class="link">
           <a href="http://github.com/fsossai">
             GitHub
-            <img src="/assets/img/github.png" class="link-img"/>
+            <img src="/assets/img/github.png" class="link-img tilting"/>
           </a>
         </p>
         <p class="link">
           <a href="https://scholar.google.com/citations?user=ZYN-FTUAAAAJ">
             Google Scholar
-            <img src="/assets/img/scholar.png" class="link-img"/>
+            <img src="/assets/img/scholar.png" class="link-img tilting"/>
           </a>
         </p>
         <p class="link">
           <a href="http://linkedin.com/in/federico-sossai">
             LinkedIn
-            <img src="/assets/img/linkedin.png" class="link-img"/>
+            <img src="/assets/img/linkedin.png" class="link-img tilting"/>
           </a>
         </p>
       </header>

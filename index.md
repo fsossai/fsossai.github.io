@@ -10,7 +10,6 @@ and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 [Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
 
 # &#x1F526; Research
-
 At the moment I'm working on **parallelizing compilers**.
 Parallelism in scientific codes has been studied for decades with remarkable results.
 The time has come for "less-scientific" codes to get de-sequentialized.
@@ -71,5 +70,3 @@ techniques applied to NP-Hard problems together with designing effective heurist
 ```
 
 [You can find me here](https://maps.app.goo.gl/yXqyoCz8yGVzU9AL8)
-
-<!-- ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png) -->
