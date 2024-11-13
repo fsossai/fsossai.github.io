@@ -1,4 +1,4 @@
-const language = [
+const dictionary = [
   { simplified: "有", traditional: "有", pinyin: "yǒu", description: "have, possess" },
   { simplified: "就", traditional: "就", pinyin: "jiù", description: "then, at once, right away, an indicator strengthening speaker's evaluation" },
   { simplified: "都", traditional: "都", pinyin: "dōu", description: "all, even, already" },

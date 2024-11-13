@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandarin Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="dictionary.js"></script>
+</head>
+<body>
+  <div class="note">
+    Press <strong id="a">enter</strong> to get the next question.<br>
+    Press <strong>space bar</strong> to get the answer.<br>
+    Press <strong>h</strong> or <strong>,</strong> to show a translation.<br>
+    Press <strong>dot</strong> to change the question/anwser mode.<br>
+    Press <strong>+</strong> to change the character set.
+  </div>
+
+  <table id="info">
+    <tr>
+      <td>mode:</td> <td id="mode"/>
+    </tr>
+    <tr>
+      <td>character set:</td> <td id="charset"/>
+    </tr>
+    <tr>
+      <td>rank range:</td>
+      <td>
+        <input id="rank-min" type="number"> - <input id="rank-max" type="number">
+      </td>
+    </tr>
+  </table>
+
+  <div id="main">
+    <div id="question"></div>
+    <div id="answer"></div>
+    <div id="description"></div>
+  </div>
+
+  <script src="logic.js"></script>
+
+</body>
+</html>
+
