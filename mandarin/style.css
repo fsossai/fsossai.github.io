@@ -14,7 +14,6 @@ td, th {
 }
 
 #settings {
-  width: 100%;
 }
 
 #question {
@@ -54,6 +53,7 @@ input {
   font-size: 2rem;
   text-align: center;
 }
+
 
 #question, #answer, #description {
   height: 30%;
