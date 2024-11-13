@@ -1,29 +1,23 @@
 let mode = "character";
-let characterSet = "simplified";
+let charset = "simplified";
 let current = null;
-let question = document.getElementById("question");
-let answer = document.getElementById("answer");
-let description = document.getElementById("description");
 setup();
 displayQuestion();
 
 function setup() {
-  question.innerText = "";
-  answer.innerText = "";
-  document.getElementById("description").innerText = "";
-  question.onclick = questionClickHandler;
-  answer.onclick = displayDescription;
-  document.getElementById("rank-max").value = dictionary.length;
-  document.getElementById("mode").onclick = flipMode;
-  document.getElementById("charset").onclick = flipCharacterSet;
-  let rmax = document.getElementById("rank-max");
-  let rmin = document.getElementById("rank-min");
-  rmin.value = 1;
-  rmax.value = 100;
-  rmin.min = 1;
-  rmin.max = dictionary.length;
-  rmax.min = 1;
-  rmax.max = dictionary.length;
+  $("#question").text("");
+  $("#answer").text("");
+  $("#description").text("");
+  $("#question").click(questionClickHandler);
+  $("#answer").click(displayDescription);
+  $("#mode").click(flipMode);
+  $("#charset").click(flipCharset);
+  $("#rank-min").val(1);
+  $("#rank-max").val(100);
+  $("#rank-min").attr("min", 1);
+  $("#rank-min").attr("max", dictionary.length);
+  $("#rank-max").attr("min", 1);
+  $("#rank-max").attr("max", dictionary.length);
   current = null;
   updateInfo();
 }
@@ -38,14 +32,14 @@ function getAnswer() {
     case "character":
       return current.pinyin;
     case "pinyin":
-      return current[characterSet];
+      return current[charset];
   }
 }
 
 function getQuestion() {
   switch (mode) {
     case "character":
-      return current[characterSet];
+      return current[charset];
     case "pinyin":
       return current.pinyin;
   }
@@ -53,39 +47,37 @@ function getQuestion() {
 
 function displayQuestion() {
   const randomIndex = getRandomNumberInRange(
-    parseInt(document.getElementById("rank-min").value, 10),
-    parseInt(document.getElementById("rank-max").value, 10)
+    parseInt($("#rank-min").val(), 10),
+    parseInt($("#rank-max").val(), 10),
   );
   current = dictionary[randomIndex];
-  question.innerText = getQuestion();
-  answer.innerText = "";
-  document.getElementById("description").innerText = "";
+  $("#question").text(getQuestion());
+  $("#answer").text("");
+  $("#description").text("");
 }
 
 
 function displayAnswer() {
-  answer.innerText = getAnswer();
+  $("#answer").text(getAnswer());
 }
 
 function updateInfo() {
-  document.getElementById("mode").innerText = `${mode}`;
-  document.getElementById("charset").innerText = `${characterSet}`;
+  $("#mode").text(`${mode}`);
+  $("#charset").text(`${charset}`);
 }
 
 function displayDescription() {
-  document.getElementById("description").innerText = current.description;
+  $("#description").text(current.description);
 }
 
 function questionClickHandler() {
-  let q = question;
-  let a = answer;
-  if (q.innerText === "") {
+  if ($("#question").text() === "") {
       displayQuestion();
   } else {
-    if (a.innerText !== "") {
-      displayQuestion();
-    } else {
+    if ($("#answer").text() === "") {
       displayAnswer();
+    } else {
+      displayQuestion();
     }
   }
 }
@@ -99,28 +91,28 @@ function flipMode() {
       mode = "character";
       break;
   }
-  setup();
   updateInfo();
+  displayQuestion();
 }
 
-function flipCharacterSet() {
-  switch (characterSet) {
+function flipCharset() {
+  switch (charset) {
     case "simplified":
-      characterSet = "traditional";
+      charset = "traditional";
       break;
     case "traditional":
-      characterSet = "simplified";
+      charset = "simplified";
       break;
   }
   switch (mode) {
     case "character":
-      if (question.innerText !== "") {
-        question.innerText = getQuestion();
+      if ($("#question").text() !== "") {
+        $("#question").text(getQuestion());
       }
       break;
     case "pinyin":
-      if (answer.innerText !== "") {
-        answer.innerText = getAnswer();
+      if ($("#answer").text() !== "") {
+        $("#answer").text(getAnswer());
       }
       break;
   }
@@ -133,7 +125,7 @@ document.addEventListener("keydown", (event) => {
       flipMode();
       break;
     case '+':
-      flipCharacterSet();
+      flipCharset();
       break;
     case 'Enter':
       displayQuestion();
