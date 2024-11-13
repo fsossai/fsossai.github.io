@@ -25,6 +25,8 @@ function setup() {
 
   document.getElementById("question").onclick = questionClickHandler;
   document.getElementById("answer").onclick = displayDescription;
+  document.getElementById("mode").onclick = flipMode;
+  document.getElementById("charset").onclick = flipCharacterSet;
 
   updateInfo();
 }
@@ -72,17 +74,25 @@ function questionClickHandler() {
   }
 }
 
+function flipMode() {
+  mode = modeFlipper[mode];
+  setup();
+  updateInfo();
+}
+
+function flipCharacterSet() {
+  characterSet = characterSetFlipper[characterSet];
+  setup();
+  updateInfo();
+}
+
 document.addEventListener("keydown", (event) => {
   switch (event.key) {
     case '.':
-      mode = modeFlipper[mode];
-      setup();
-      updateInfo();
+      flipMode();
       break;
     case '+':
-      characterSet = characterSetFlipper[characterSet];
-      setup();
-      updateInfo();
+      flipCharacterSet();
       break;
     case 'Enter':
       displayQuestion();
@@ -96,8 +106,4 @@ document.addEventListener("keydown", (event) => {
       break;
     default:
   }
-});
-
-
-document.addEventListener("click", (e) => {
 });
