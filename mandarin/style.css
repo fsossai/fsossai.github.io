@@ -13,9 +13,6 @@ td, th {
   color: #666;
 }
 
-#settings {
-}
-
 #question {
   font-size: 6rem;
 }
@@ -53,7 +50,6 @@ input {
   font-size: 2rem;
   text-align: center;
 }
-
 
 #question, #answer, #description {
   height: 30%;
