@@ -1,15 +1,21 @@
 let mode = "character";
 let characterSet = "simplified";
-const question = { "character": characterSet, "pinyin": "pinyin" }
-const answer = { "character": "pinyin", "pinyin": characterSet }
-const modeFlipper = { "character": "pinyin", "pinyin": "character" };
-const characterSetFlipper = { "simplified": "traditional", "traditional": "simplified" };
 let current = null;
+let question = document.getElementById("question");
+let answer = document.getElementById("answer");
+let description = document.getElementById("description");
 setup();
 displayQuestion();
 
 function setup() {
+  question.innerText = "";
+  answer.innerText = "";
+  document.getElementById("description").innerText = "";
+  question.onclick = questionClickHandler;
+  answer.onclick = displayDescription;
   document.getElementById("rank-max").value = dictionary.length;
+  document.getElementById("mode").onclick = flipMode;
+  document.getElementById("charset").onclick = flipCharacterSet;
   let rmax = document.getElementById("rank-max");
   let rmin = document.getElementById("rank-min");
   rmin.value = 1;
@@ -18,16 +24,7 @@ function setup() {
   rmin.max = dictionary.length;
   rmax.min = 1;
   rmax.max = dictionary.length;
-  document.getElementById("question").innerText = "";
-  document.getElementById("answer").innerText = "";
-  document.getElementById("description").innerText = "";
   current = null;
-
-  document.getElementById("question").onclick = questionClickHandler;
-  document.getElementById("answer").onclick = displayDescription;
-  document.getElementById("mode").onclick = flipMode;
-  document.getElementById("charset").onclick = flipCharacterSet;
-
   updateInfo();
 }
 
@@ -36,19 +33,38 @@ function getRandomNumberInRange(min, max) {
   return Math.floor(Math.random() * size) + min;
 }
 
+function getAnswer() {
+  switch (mode) {
+    case "character":
+      return current.pinyin;
+    case "pinyin":
+      return current[characterSet];
+  }
+}
+
+function getQuestion() {
+  switch (mode) {
+    case "character":
+      return current[characterSet];
+    case "pinyin":
+      return current.pinyin;
+  }
+}
+
 function displayQuestion() {
   const randomIndex = getRandomNumberInRange(
     parseInt(document.getElementById("rank-min").value, 10),
     parseInt(document.getElementById("rank-max").value, 10)
   );
   current = dictionary[randomIndex];
-  document.getElementById("question").innerText = current[question[mode]];
-  document.getElementById("answer").innerText = "";
+  question.innerText = getQuestion();
+  answer.innerText = "";
   document.getElementById("description").innerText = "";
 }
 
+
 function displayAnswer() {
-  document.getElementById("answer").innerText = current[answer[mode]];
+  answer.innerText = getAnswer();
 }
 
 function updateInfo() {
@@ -61,8 +77,8 @@ function displayDescription() {
 }
 
 function questionClickHandler() {
-  let q = document.getElementById("question");
-  let a = document.getElementById("answer");
+  let q = question;
+  let a = answer;
   if (q.innerText === "") {
       displayQuestion();
   } else {
@@ -75,14 +91,39 @@ function questionClickHandler() {
 }
 
 function flipMode() {
-  mode = modeFlipper[mode];
+  switch (mode) {
+    case "character":
+      mode = "pinyin";
+      break;
+    case "pinyin":
+      mode = "character";
+      break;
+  }
   setup();
   updateInfo();
 }
 
 function flipCharacterSet() {
-  characterSet = characterSetFlipper[characterSet];
-  setup();
+  switch (characterSet) {
+    case "simplified":
+      characterSet = "traditional";
+      break;
+    case "traditional":
+      characterSet = "simplified";
+      break;
+  }
+  switch (mode) {
+    case "character":
+      if (question.innerText !== "") {
+        question.innerText = getQuestion();
+      }
+      break;
+    case "pinyin":
+      if (answer.innerText !== "") {
+        answer.innerText = getAnswer();
+      }
+      break;
+  }
   updateInfo();
 }
 
