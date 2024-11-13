@@ -5,31 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mandarin Game</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="dictionary.js"></script>
 </head>
 <body>
-  <div class="note">
-    Press <strong id="a">enter</strong> to get the next question.<br>
-    Press <strong>space bar</strong> to get the answer.<br>
+  <div id="help">
+    Press <strong>enter</strong> to go ahead.<br>
+    Press <strong>space bar</strong> to show the answer.<br>
     Press <strong>h</strong> or <strong>,</strong> to show a translation.<br>
-    Press <strong>dot</strong> to change the question/anwser mode.<br>
-    Press <strong>+</strong> to change the character set.
   </div>
 
-  <table id="info">
-    <tr>
-      <td>mode:</td> <td id="mode"/>
-    </tr>
-    <tr>
-      <td>character set:</td> <td id="charset"/>
-    </tr>
-    <tr>
-      <td>rank range:</td>
-      <td>
-        <input id="rank-min" type="number"> - <input id="rank-max" type="number">
-      </td>
-    </tr>
-  </table>
+  <div id="settings">
+    <table>
+      <tr>
+        <td>mode</td>
+        <td>character set</td>
+        <td>rank range</td>
+      </tr>
+      <tr>
+        <td>
+          <div id="mode"></div>
+        </td>
+        <td>
+          <div id="charset"></div>
+        </td>
+        <td>
+          <input id="rank-min" type="number">
+          <input id="rank-max" type="number">
+        </td>
+      </tr>
+      <tr>
+        <td>(click to change)</td>
+        <td>(click to change)</td>
+        <td>(customizable)</td>
+      </tr>
+    </table>
+  </div>
 
   <div id="main">
     <div id="question"></div>

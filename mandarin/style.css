@@ -1,56 +1,64 @@
-        body {
-          font-family: Arial, sans-serif;
-        }
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
 
-        .note {
-          position: absolute;
-          bottom: 20px;
-          left: 20px;
-          font-size: 25px;
-          color: #666;
-        }
+td, th {
+  border: 0px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
 
-        #info {
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          font-size: 25px;
-          text-align: right;
-          color: #666;
-        }
+#help {
+  color: #666;
+}
 
-        #mode, #charset {
-          text-align: left;
-          font-weight: bold;
-        }
+#settings {
+  width: 100%;
+}
 
-        #rank-min, #rank-max {
-          width: 100px;
-          font-size: 25px;
-          color: #666;
-        }
+#question {
+  font-size: 6rem;
+}
 
-        #main {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 500px;
-          height: 500px;
-          flex-direction: column;
-        }
+#answer {
+  font-size: 4rem;
+}
 
-        #question, #answer, #description {
-          height: 50%;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
-        }
+#description {
+  font-size: 2rem;
+}
 
-        #question, #answer {
-          font-size: 150px;
-        }
+#settings, #help, #main {
+  height: 30%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 
-        #description {
-          font-size: 25px;
-        }
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#settings, #help {
+  color: #666;
+}
+
+input {
+  border-radius: 3px;
+  color: #666;
+  border: 2px solid #ccc;
+}
+
+#mode, #charset, #rank-min, #rank-max {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#question, #answer, #description {
+  height: 30%;
+  padding-top: 1%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

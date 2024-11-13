@@ -92,7 +92,12 @@ function flipMode() {
       break;
   }
   updateInfo();
-  displayQuestion();
+  $("#question").text(getQuestion());
+  if ($("#answer").text() !== "") {
+    $("#answer").text(getAnswer());
+  } else {
+    $("#answer").text("");
+  }
 }
 
 function flipCharset() {
