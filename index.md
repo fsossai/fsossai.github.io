@@ -4,7 +4,7 @@ layout: default
 
 **Ciao!** My name is Federico Sossai and I don't snack during talks :)
 
-[Among other things](./others), I'm a third-year PhD student at
+I'm a third-year Computer Science PhD student at
 [Northwestern University](https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html)
 and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 [Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
@@ -16,20 +16,23 @@ In my vision, a powerful langugage allows users to express high-level **properti
 of their algorithms, while a powerful compiler should exploit them
 and minimize the performance cost of the abstractions that permit such expressiveness.
 
-Nobody focusing on an algorithm enojys being distracted by a code that quickly gets
-unreadable and inflexible because of tedious implementation details.
+During the implementation of an algortihm, it's easy to get distracted
+by low-level details that pollute our code making it unreadable and inflexible.
 
 When single-core performance is not enough, the problem is exacerbated by manual
-parallelelization techniques that, for example, require data structures to be reshaped
+parallelization techniques that, for example, require data structures to be reshaped
 or even worse, redesigned.
+
+Automatic parallelization for scientific codes has been studied for decades with remarkable results.
+However, when programs are not dominated by well-structured array computation
+we are in dim candlelight.
 
 This is why I'm investigating the following questions:
 0. What is hindering compilers from **extracting parallelism** in sequential programs?
 0. How to bring **data collections** into the compiler to unlock more parallelizing transformations?
 
-Parallelism in scientific codes has been studied for decades with remarkable results.
-However, when programs are not dominated by well-structured array computation
-we are in dim candlelight.
+To answer these questions I'm studying the nature of the **loop-carried data dependences**
+that block parallelization and how we can satisfy them in less conventional ways.
 I believe that in the advent of an even more heterogeneous future, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
 
