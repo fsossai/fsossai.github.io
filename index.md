@@ -33,6 +33,7 @@ This is why I'm investigating the following questions:
 
 To answer these questions I'm studying the nature of the **loop-carried data dependences**
 that block parallelization and how we can satisfy them in less conventional ways.
+
 I believe that in the advent of an even more heterogeneous future, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
 
