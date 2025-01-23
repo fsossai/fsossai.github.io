@@ -43,10 +43,10 @@ that understands and manipulates parallelism will be hard to overstate.
 
 # &#x1FAB6; About Me
 
-I've always had a strong passion for programming, since middle school.
-I'm fascinated by how much structure can emerge when enough thought is
-put into passing ideas through the sieve of algorithmic precision,
+I've always had a strong passion for programming.
+I'm fascinated by how much structure can emerge when spoken ideas become written algorithms,
 and how these structures come back again and again.
+
 At the [University of Padova](https://www.dei.unipd.it/en/), I realized how
 the love for learning did not only belong to computer science but extended to
 all the disciplines ruled by the rigor of math.
