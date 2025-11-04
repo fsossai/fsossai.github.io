@@ -2,9 +2,9 @@
 layout: default
 ---
 
-**Ciao!** My name is Federico Sossai and I don't snack during talks :)
+**Ciao!** My name is Federico Sossai and I like trees.
 
-I'm a third-year Computer Science PhD student at
+I'm a fourth-year Computer Science PhD student at
 [Northwestern University](https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html)
 and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 [Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
@@ -12,29 +12,29 @@ and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 # &#x1F526; Research
 At the moment I'm working on **parallelizing compilers**.
 
-In my vision, a powerful langugage allows users to express high-level **properties**
+In my vision, a powerful language allows users to express high-level **properties**
 of their algorithms, while a powerful compiler should exploit them
 and minimize the performance cost of the abstractions that permit such expressiveness.
 
-During the implementation of an algortihm, it's easy to get distracted
+During the implementation of an algorithm, it's easy to get distracted
 by low-level details that pollute our code making it unreadable and inflexible.
 
 When single-core performance is not enough, the problem is exacerbated by manual
 parallelization techniques that, for example, require data structures to be reshaped
-or even worse, redesigned.
+or, even worse, redesigned.
 
-Automatic parallelization for scientific codes has been studied for decades with remarkable results.
+Automatic parallelization has been studied for decades with remarkable results for scientific codes.
 However, when programs are not dominated by well-structured array computation
-we are in dim candlelight.
+we are left in dim candlelight.
 
 This is why I'm investigating the following questions:
 0. What is hindering compilers from **extracting parallelism** in sequential programs?
 0. How to bring **data collections** into the compiler to unlock more parallelizing transformations?
 
-To answer these questions I'm studying the nature of the **loop-carried data dependences**
+To answer these questions I'm studying the nature of the **data dependences**
 that block parallelization and how we can satisfy them in less conventional ways.
 
-I believe that in the advent of an even more heterogeneous future, the importance of a compiler
+Now that almost all hardware is parallel, the importance of a compiler
 that understands and manipulates parallelism will be hard to overstate.
 
 # &#x1F4DC; Publications
