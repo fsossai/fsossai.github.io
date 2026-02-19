@@ -10,32 +10,15 @@ and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
 [Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
 
 # &#x1F526; Research
-At the moment I'm working on **parallelizing compilers**.
+In my vision, a compiler has high chances of being a programmer's best friend when it comes to developing parallel code for CPUs.
+At the same time, static analyses struggle to infer opportunities for parallelism beyond highly regular array codes.
+Even if alias analysis could be solved precisely and quickly, compilers would still have to face many _real_ data dependencies that are not at all easy to overcome.
 
-In my vision, a powerful language allows users to express high-level **properties**
-of their algorithms, while a powerful compiler should exploit them
-and minimize the performance cost of the abstractions that permit such expressiveness.
+_In fact, some code properties are simply not inferrable statically._
 
-During the implementation of an algorithm, it's easy to get distracted
-by low-level details that pollute our code making it unreadable and inflexible.
+This is why I'm working on **new abstractions and IRs for parallelizing compilers** that capture and encode key properties essential for unlocking more parallelism.
 
-When single-core performance is not enough, the problem is exacerbated by manual
-parallelization techniques that, for example, require data structures to be reshaped
-or, even worse, redesigned.
-
-Automatic parallelization has been studied for decades with remarkable results for scientific codes.
-However, when programs are not dominated by well-structured array computation
-we are left in dim candlelight.
-
-This is why I'm investigating the following questions:
-0. What is hindering compilers from **extracting parallelism** in sequential programs?
-0. How to bring **data collections** into the compiler to unlock more parallelizing transformations?
-
-To answer these questions I'm studying the nature of the **data dependences**
-that block parallelization and how we can satisfy them in less conventional ways.
-
-Now that almost all hardware is parallel, the importance of a compiler
-that understands and manipulates parallelism will be hard to overstate.
+I'm also interested in how **a compiler aware of data collections** could uncover new parallelization strategies that would be too burdensome for programmers to write.
 
 # &#x1F4DC; Publications
 
