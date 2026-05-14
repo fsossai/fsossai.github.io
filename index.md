@@ -4,21 +4,22 @@ layout: default
 
 **Ciao!** My name is Federico Sossai and I like trees.
 
-I'm a fourth-year Computer Science PhD student at
+I'm a fourth-year Computer Science PhD candidate at
 [Northwestern University](https://www.mccormick.northwestern.edu/computer-science/research/areas/systems-networking.html)
 and part of the [ARCANA Lab](https://github.com/arcana-lab) led by
-[Simone Campanoni](https://users.cs.northwestern.edu/~simonec). 
+[Simone Campanoni](https://users.cs.northwestern.edu/~simonec).
+Before joining Northwestern, I attended the [University of Padua](https://degrees.dei.unipd.it/master-degrees/computer-engineering) in Italy.
 
 # &#x1F526; Research
-In my vision, a compiler has high chances of being a programmer's best friend when it comes to developing parallel code for CPUs.
-At the same time, static analyses struggle to infer opportunities for parallelism beyond highly regular array codes.
-Even if alias analysis could be solved precisely and quickly, compilers would still have to face many _real_ data dependencies that are not at all easy to overcome.
 
-_In fact, some code properties are simply not inferrable statically._
+My research focuses on abstractions and intermediate representations for parallelizing compilers.
+I am especially interested in **what compilers need in order to expose parallelism** in CPU programs beyond highly regular array code, where static analyses often fall short.
 
-This is why I'm working on **new abstractions and IRs for parallelizing compilers** that capture and encode key properties essential for unlocking more parallelism.
+_In fact, some code properties are simply not statically inferable._
 
-I'm also interested in how **a compiler aware of data collections** could uncover new parallelization strategies that would be too burdensome for programmers to write.
+My work explores novel IRs and abstractions that make key algorithm-specific and data collection properties explicit, enabling parallelization strategies that would be difficult or burdensome for programmers to express by hand.
+My work studies how IRs can represent the **higher-level** algorithmic and data collection-specific properties that programmers use to expose parallelism manually.
+
 
 # &#x1F4DC; Publications
 
