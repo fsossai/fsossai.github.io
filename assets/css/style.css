@@ -92,9 +92,9 @@ h1 { max-width: 12ch; margin-bottom: 1.5rem; font-size: clamp(2.35rem, 5vw, 4.3r
 blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px solid #d8a66f; color: #595149; font-style: italic; }
 
 .publication-list { display: grid; }
-.publication { display: block; padding: 1.75rem 0; border-top: 1px solid var(--line); }
+.publication { display: block; padding: .9rem 0; border-top: 1px solid var(--line); }
 .publication:first-child { border-top: 0; padding-top: 0; }
-.publication__meta { display: flex; align-items: baseline; gap: .35rem; margin-bottom: .9rem; color: #8b8379; font-size: .9rem; }
+.publication__meta { display: flex; align-items: baseline; gap: .35rem; margin-bottom: .4rem; color: #8b8379; font-size: .9rem; }
 .publication__meta span { color: var(--ink); font-weight: 700; }
 .publication > div:last-child { margin-left: 2.75rem; }
 .publication p { margin-bottom: .25rem; color: #847d74; font-size: .86rem; line-height: 1.55; }
