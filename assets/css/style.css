@@ -94,7 +94,7 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
 .publication-list { display: grid; }
 .publication { display: block; padding: .9rem 0; border-top: 1px solid var(--line); }
 .publication:first-child { border-top: 0; padding-top: 0; }
-.publication__meta { display: flex; align-items: baseline; gap: .35rem; margin-bottom: .4rem; color: #8b8379; font-size: .9rem; }
+.publication__meta { display: flex; align-items: baseline; gap: .35rem; margin-bottom: .4rem; color: #8b8379; font-size: 1.05rem; }
 .publication__meta span { color: var(--ink); font-weight: 700; }
 .publication > div:last-child { margin-left: 2.75rem; }
 .publication p { margin-bottom: .25rem; color: #847d74; font-size: 1.05rem; line-height: 1.55; }
@@ -105,7 +105,7 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
 .publication__type::before { content: "["; }
 .publication__type::after { content: "]"; }
 
-.contact-card { margin: 0 0 1.35rem; padding: 1.35rem 1.5rem; overflow-x: auto; border: 1px solid #e6ded2; border-radius: .35rem; background: var(--paper-warm); box-shadow: var(--shadow); color: #4e4942; font: .76rem/1.7 Consolas, "SFMono-Regular", monospace; }
+.contact-card { margin: 0 0 1.35rem; padding: 1.35rem 1.5rem; overflow-x: auto; border: 1px solid #e6ded2; border-radius: .35rem; background: var(--paper-warm); box-shadow: var(--shadow); color: #4e4942; font: 1.05rem/1.7 Consolas, "SFMono-Regular", monospace; }
 .contact-card a { color: #8e4d22; }
 .json-key { color: #924e3a; }
 .json-string { color: #486d3f; }
@@ -135,7 +135,7 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
   .identity__role { max-width: 13rem; }
   .content section { padding-top: 3.5rem; }
   .publication > div:last-child { margin-left: 1.25rem; }
-  .contact-card { margin-right: -.45rem; margin-left: -.45rem; padding: 1rem; font-size: .68rem; }
+  .contact-card { margin-right: -.45rem; margin-left: -.45rem; padding: 1rem; font-size: 1.05rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
