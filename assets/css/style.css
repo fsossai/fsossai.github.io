@@ -35,12 +35,21 @@ a:hover, a:focus-visible { color: var(--accent-dark); text-decoration-color: cur
 .autumn-banner {
   position: fixed;
   inset: 0 0 auto;
+  z-index: 2;
   height: 15rem;
   background-image: linear-gradient(to bottom, transparent 45%, var(--paper) 100%), linear-gradient(to right, var(--paper), transparent 12%, transparent 88%, var(--paper)), url("../img/autumn.jpg");
   background-position: center top;
   background-size: min(100rem, 110vw) auto;
   background-repeat: no-repeat;
   opacity: .92;
+  pointer-events: none;
+}
+.scroll-fade {
+  position: fixed;
+  inset: 15rem 0 auto;
+  z-index: 1;
+  height: 3rem;
+  background: linear-gradient(to bottom, var(--paper), transparent);
   pointer-events: none;
 }
 .site-shell {
@@ -119,6 +128,7 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
 
 @media (max-width: 850px) {
   .autumn-banner { height: 12rem; background-size: auto 12rem; }
+  .scroll-fade { top: 12rem; }
   .site-shell { display: block; width: min(calc(100% - 3rem), 43rem); padding-top: 13.5rem; }
   .sidebar { position: relative; top: auto; bottom: auto; width: auto; min-height: 0; display: grid; grid-template-columns: 1fr auto; align-items: end; text-align: left; }
   .identity__name { font-size: clamp(2.7rem, 11vw, 4rem); }
