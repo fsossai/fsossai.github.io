@@ -1,18 +1,13 @@
-name: Sanity check
+name: Validate static site
 
 on:
   push:
   pull_request:
-    types: [opened, synchronize]
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-      - name: Build site
-        run: bundle exec jekyll build
+      - name: Check pages and local links
+        run: python3 script/check_site.py
