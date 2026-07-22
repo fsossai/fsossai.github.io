@@ -124,7 +124,6 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
   .identity__name { font-size: clamp(2.7rem, 11vw, 4rem); }
   .last-updated { display: none; }
   .social-links { margin: 0; gap: .65rem; }
-  .social-links a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
   .social-links img { width: 1.8rem; height: 1.8rem; }
   .content { padding-top: 5rem; }
   .mobile-footer { display: block; }
@@ -132,7 +131,9 @@ blockquote { margin: 1.7rem 0; padding: .2rem 0 .2rem 1.35rem; border-left: 3px 
 @media (max-width: 520px) {
   body { font-size: 1.05rem; }
   .site-shell { width: min(calc(100% - 2rem), 43rem); padding-bottom: 3rem; }
-  .identity__role { max-width: 13rem; }
+  .sidebar { display: block; }
+  .identity__role { max-width: none; white-space: nowrap; }
+  .social-links { align-items: flex-end; margin-top: 1.5rem; }
   .content section { padding-top: 3.5rem; }
   .publication > div:last-child { margin-left: 1.25rem; }
   .contact-card { margin-right: -.45rem; margin-left: -.45rem; padding: 1rem; font-size: 1.05rem; }
